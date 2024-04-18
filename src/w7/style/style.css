@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 18px;
+}
+
+h1,
+h2 {
+  text-align: center;
+  /*글자 정렬 가운데*/
+}
+
+.container {
+  max-width: 50rem;
+  margin-inline: auto;
+  background-color: oklch(90% 0 0);
+  padding-inline: 2.5rem;
+}
+
+.container > div {
+  padding: 1rem;
+}
+
+/*각 div 만들기 - div:nth-child(container안에 몇번째 줄?) 그 줄만 효과주기*/
+.container > div:nth-child(1) {
+  background-color: oklch(90% 0.05 0);
+  border: 0.0625rem dotted oklch(40% 0.05 0);
+  color: oklch(20% 0.05 0);
+}
+.container > div:nth-child(2) {
+  background-color: oklch(90% 0.05 40);
+  border: 0.0625rem dotted oklch(40% 0.05 40);
+  color: oklch(20% 0.05 40);
+}
+
+.container > div:nth-child(3) {
+  background-color: oklch(90% 0.05 80);
+  border: 0.0625rem dotted oklch(40% 0.05 80);
+  color: oklch(20% 0.05 80);
+}
+.container > div:nth-child(4) {
+  background-color: oklch(90% 0.05 120);
+  border: 0.0625rem dotted oklch(40% 0.05 120);
+  color: oklch(20% 0.05 120);
+}
+.container > div:nth-child(5) {
+  background-color: oklch(90% 0.05 160);
+  border: 0.0625rem dotted oklch(40% 0.05 160);
+  color: oklch(20% 0.05 160);
+}
+
+.flex-container {
+  display: flex;
+}
+
+.flex-child-opt-1 {
+  flex-grow: 1;
+}
+/* grow:1 정렬했을 때 맨 오른쪽 공간이 생기는데 그 공간을 채워주는 / grow:1만 넣는다고 각 사이즈 균등해지지 않음*/
+
+/* .flex-container > * {
+  flex-grow: 1;
+} */
+/* container 모두 적용됨 */
+
+.flex-child-opt-2 {
+  flex-basis: 0;
+  flex-grow: 1;
+}
+/* 일자로 정렬했을 때 같은 비율로 정렬됨 */
+
+.flex-container-opt-1 {
+  /* gap: 16px; */
+  column-gap: 16px;
+  row-gap: 24px;
+}
+/* gap: 안에 있는 div마다 공간이 생김 */
+/* column-가로, row-행 */
+
+.flex-container-opt-2 {
+  /* justify-content: ; */
+  /* justify-content: right; */
+  /* justify-content: left; */
+  /* justify-content: center; */
+  /* justify-content: space-evenly; */
+  /* justify-content: space-between; */
+  /* justify-content: space-around; */
+  /* evenly 1:1:1 // aroumd 1:2:2:1*/
+  justify-content: space-between;
+}
+
+.flex-container-opt-3 {
+  /* align-items: stretch; */
+  /* 기본 옵션:stretch */
+  /* align-items: start; */
+  /* align-items: end; */
+  align-items: center;
+}
+/* align-items: 글씨를 기준으로 뒷배경과 글씨 정렬(위면 맨 위로 정렬됨+뒷 배경도 글씨에 맞춰서 줄어듦) */
+
+.flex-container-opt-4 {
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-container-opt-4 > * {
+  width: 7.5rem;
+}
+
+.flex-wrap {
+  /* flex-wrap: nowrap; */
+  flex-wrap: wrap;
+}
+
+.flex-wrap-opt-1 {
+  column-gap: 0.75rem;
+  row-gap: 1.5rem;
+}
+
+.flex-wrap-opt-1 > * {
+  flex-grow: 1;
+  flex-basis: 0;
+  min-width: 1ㅈ.5rem;
+}
