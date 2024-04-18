@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
+.section {
+  background-color: aqua;
+  padding: 1rem;
+  border: 1px solid #000;
+}
+/* 안 쪽 여백 패딩 사용하기를 추천 */
+
+.container {
+  background-color: bisque;
+  max-width: 50rem;
+  margin-inline: auto;
+  padding: 1rem;
+}
+
+.children {
+  border: 1px solid #f00;
+  padding: 1rem;
+}
+
+.flex {
+  display: flex;
+}

@@ -1,0 +1,86 @@
+/* @import url("//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css"); */
+/* 온라인에서 직접 가지고 오기 때문에 와이파이 없으면 불러올 수가 없음. */
+
+@import url("https://fonts.googleapis.com/css2?family=Cute+Font&display=swap");
+/* 구글 폰트에서 가지고 올 때 앞 뒤 스타일 빼기(import->css) */
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+
+body {
+  font-family: "Cute Font", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.card.card--color-bule {
+  background-color: oklch(98% 0.025 200);
+}
+
+.card {
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 00;
+  font-style: normal;
+  max-width: 25rem;
+  background-color: oklch(98% 0.025 90);
+  overflow-x: hidden;
+  /* padding: 1rem; */
+  border-radius: 0.75rem;
+  margin-top: 3rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* psuedo selector */
+.card:first-child {
+  margin-top: 0;
+}
+
+.card__img {
+  width: 100%;
+}
+.card__top {
+  /* margin: 1rem; */
+  padding-inline: 1rem;
+  padding: 0.75rem;
+}
+
+.card__bottom {
+  padding: 1rem;
+}
+
+.card__p {
+  margin-top: 2rem;
+}
+
+.card__title {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+
+.card__subtitle {
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  line-height: 1.25rem;
+}
+
+.card__bottom .card__title {
+  font-weight: 400;
+}
+/* 부모가 bottom인 title에만 적용됨. .card__bottom' '(한칸 띄어쓰기 한 것임).card__title*/
+
+.card__bottom > .card__title {
+  font-weight: 400;
+}
+/* bottom 바로 아래 있는 title을 말함. 작업 하다가 중간에 div가 생겼을 경우 문제가 생길 수 있음. */
+
+.card__bottom .card__subtitle {
+  margin-top: 0;
+}
