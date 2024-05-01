@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.navigation {
+  font-size: 1.5rem;
+  background-color: #000;
+  color: #fff;
+  padding-inline: 1.875rem;
+  padding-block: 1.1875rem;
+  &__container {
+    width: 90%;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__menu-group {
+    display: flex;
+    align-items: center;
+    &--left {
+      gap: 0.8125rem;
+    }
+    &--right {
+      gap: 1rem;
+      @media (width<900px) {
+        & {
+          display: none;
+        }
+      }
+    }
+  }
+  &__page-title {
+    margin-top: 3px;
+    padding-top: 3px;
+    padding-left: 0.8125rem;
+    line-height: 1.4375rem;
+    border-left: 0.125rem solid #fff;
+  }
+  &__logo {
+    height: 32px;
+    aspect-ratio: 200 / 51;
+  }
+
+  &__btn {
+    line-height: 36px;
+    padding-inline: 1.4375rem;
+    padding-block: 7px;
+    border-radius: 0.5rem;
+    &--outline {
+      border: 1px solid #fff;
+      background-color: #191a1b;
+    }
+    &--fill {
+      background-color: #4c5fd5;
+    }
+  }
+}
+
+// @media (width < 900px) {
+// .navigation {
+// &__menu-group {
+// &--right {
+// display: none;
+// }
+// }
+// }
+//media width가 900이하 줄어들면 사라짐.
+// }
+
+.hero {
+  background-color: #dadbee;
+  padding-inline: 30px;
+  padding-block: 80px 115px;
+  &__container {
+    width: 90%;
+    margin-inline: auto;
+  }
+  &__text {
+    font-size: 80px;
+    line-height: 120px;
+    text-align: center;
+    margin-inline: auto;
+    width: 80%;
+  }
+  &__search-input {
+    border-radius: 0.25rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 0.0625rem solid #000;
+    background-color: #fff;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-inline: auto;
+    display: block;
+    width: 80%;
+    // inline 안 먹는 이유 : input이 inline-block으로 되어 있어서 input을 block으로 바꿔야함
+  }
+}
+
+.feature {
+  padding: 30px;
+  &__container {
+    column-gap: 24px;
+    row-gap: 48px;
+    width: 80%;
+    padding-left: 0;
+    margin-inline: auto;
+    margin-block: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    & > * {
+      flex-basis: 0;
+      // 균등하게 애들 사이 같아짐.-사이즈가 같아짐.(사진때문에 달랐다면 같게 해줌)
+      flex-grow: 1;
+      min-width: 400px;
+    }
+  }
+}
+
+.card {
+  display: flex;
+  gap: 1.875rem;
+  padding-top: 3rem;
+  // &__area {
+  //   &-left {
+  //   }
+  //   &-right {
+  //   }
+  // }
+  // &__img {
+  //   max-width: 5rem;
+  // }
+  // &__title {
+  // }
+  // &__desc {
+  // }
+  // &__more {
+  // }
+}
