@@ -40,17 +40,12 @@ body {
 .navigation__page-title {
   margin-top: 3px;
   padding-top: 3px;
-  padding-left: 0.8125rem;
-  line-height: 1.4375rem;
-  border-left: 0.125rem solid #fff;
-}
-.navigation__logo {
-  height: 32px;
-  aspect-ratio: 200/51;
+  padding-left: 13px;
+  line-height: 23px;
+  border-left: 2px solid #fff;
 }
 .navigation__btn {
-  line-height: 36px;
-  padding-inline: 1.4375rem;
+  padding-inline: 23px;
   padding-block: 7px;
   border-radius: 0.5rem;
 }
@@ -76,7 +71,6 @@ body {
   line-height: 120px;
   text-align: center;
   margin-inline: auto;
-  width: 80%;
 }
 .hero__search-input {
   border-radius: 0.25rem;
@@ -95,14 +89,15 @@ body {
   padding: 30px;
 }
 .feature__container {
-  -moz-column-gap: 24px;
-       column-gap: 24px;
-  row-gap: 48px;
+  -moz-column-gap: 1.5rem;
+  column-gap: 1.5rem;
+  row-gap: 3rem;
   width: 80%;
   padding-left: 0;
   margin-inline: auto;
+  padding-left: 0;
   list-style: none;
-  margin-bottom: 0;
+  margin-block: 0;
   display: flex;
   flex-wrap: wrap;
 }
@@ -115,8 +110,8 @@ body {
 .card {
   display: flex;
   gap: 1.875rem;
-  padding-top: 48px;
-}
-.card__img {
-  width: 80px;
+  padding-top: 3rem;
+  &__img {
+    max-width: 5rem;
+  }
 }
