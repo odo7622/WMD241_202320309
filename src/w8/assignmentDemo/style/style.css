@@ -5,16 +5,16 @@
 body {
   margin: 0;
   font-family: sans-serif;
-  font-size: 20px;
-  line-height: 28px;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .navigation {
-  font-size: 24px;
+  font-size: 1.5rem;
   background-color: #000;
   color: #fff;
-  padding-inline: 30px;
-  padding-block: 19px;
+  padding-inline: 1.875rem;
+  padding-block: 1.1875rem;
 }
 .navigation__container {
   width: 90%;
@@ -27,39 +27,39 @@ body {
   align-items: center;
 }
 .navigation__menu-group--left {
-  gap: 13px;
+  gap: 0.8125rem;
 }
 .navigation__menu-group--right {
-  gap: 16px;
+  gap: 1rem;
 }
-@media (width < 56.25rem) {
+@media (width < 900px) {
   .navigation__menu-group--right {
     display: none;
   }
 }
-.navigation__logo {
-  height: 2rem;
-  aspect-ratio: 200/51;
-}
 .navigation__page-title {
   margin-top: 3px;
   padding-top: 3px;
-  padding-left: 13px;
-  line-height: 23px;
-  border-left: 2px solid #fff;
+  padding-left: 0.8125rem;
+  line-height: 1.4375rem;
+  border-left: 0.125rem solid #fff;
+}
+.navigation__logo {
+  height: 32px;
+  aspect-ratio: 200/51;
 }
 .navigation__btn {
-  padding-inline: 23px;
-  padding-block: 7px;
   line-height: 36px;
-  border-radius: 8px;
+  padding-inline: 1.4375rem;
+  padding-block: 7px;
+  border-radius: 0.5rem;
 }
 .navigation__btn--outline {
-  border: 0.0625rem solid #fff;
+  border: 1px solid #fff;
   background-color: #191a1b;
 }
 .navigation__btn--fill {
-  background-color: #515fcb;
+  background-color: #4c5fd5;
 }
 
 .hero {
@@ -72,11 +72,11 @@ body {
   margin-inline: auto;
 }
 .hero__text {
-  font-size: 5rem;
-  line-height: 7.5rem;
+  font-size: 80px;
+  line-height: 120px;
   text-align: center;
-  width: 80%;
   margin-inline: auto;
+  width: 80%;
 }
 .hero__search-input {
   border-radius: 0.25rem;
@@ -95,14 +95,14 @@ body {
   padding: 30px;
 }
 .feature__container {
-  -moz-column-gap: 1.5rem;
-  column-gap: 1.5rem;
-  row-gap: 3rem;
+  -moz-column-gap: 24px;
+       column-gap: 24px;
+  row-gap: 48px;
   width: 80%;
-  margin-inline: auto;
   padding-left: 0;
-  list-style: none;
+  margin-inline: auto;
   margin-block: 0;
+  list-style: none;
   display: flex;
   flex-wrap: wrap;
 }
@@ -116,7 +116,4 @@ body {
   display: flex;
   gap: 1.875rem;
   padding-top: 3rem;
-  &__img {
-    max-width: 5rem;
-  }
 }

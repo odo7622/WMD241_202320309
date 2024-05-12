@@ -1,0 +1,44 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: oklch(0.2 0 0);
+  font-size: 1.125rem;
+  line-height: 150%;
+}
+
+.container {
+  display: grid;
+  // 넣어도 변화가 없음. 그냥 그리드만 생김
+  column-gap: 24px;
+  row-gap: 24px;
+  grid-template-columns: 12.5rem repeat(auto-fit, minmax(240px, 1fr));
+  max-width: 1280px;
+  padding: 0.75rem;
+  background-color: oklch(0.5 0 0);
+  margin-inline: auto;
+  // 가운데로 오기
+}
+
+.sidebar {
+  grid-column: 1;
+  grid-row: 1 / span 3;
+  background-color: #fff;
+  padding: 12px;
+}
+
+.card-collection {
+  display: grid;
+  grid-column: 2 / -1;
+  grid-row: 1 / -1;
+  grid-template-columns: subgrid;
+}
+
+.title {
+  grid-column: 1 / -1;
+  // 1/-4로 해버리면 화면 축소돼서 3개로 변할때 이상해짐.
+}

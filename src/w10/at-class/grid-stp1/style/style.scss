@@ -1,0 +1,71 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  line-height: 150%;
+  font-size: 1.125rem;
+}
+
+.section {
+  padding-block: 24px;
+}
+
+.section > h2 {
+  max-width: 60rem;
+  margin-inline: auto;
+  // 가운데로 오게 하기
+  margin-block: 0;
+  padding-inline: 1.5rem;
+  margin-bottom: 12px;
+}
+.container {
+  max-width: 60rem;
+  margin-inline: auto;
+  // 가운데로 오게 하기
+  padding-inline: 24px;
+  background-color: oklch(0.95 0.05 240);
+}
+
+.grid {
+  display: grid;
+
+  &__item {
+    &--nth {
+      @for $i from 1 through 12 {
+        &-#{$i} {
+          background-color: oklch(0.9 0.05 $i * 30);
+        }
+      }
+    }
+  }
+
+  &--op-1 {
+    grid-template-columns: 1fr 1fr 1fr;
+    // columns: 가로
+    // grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 4fr;
+    grid-auto-rows: 1fr;
+    // rows: 세로
+    // fr:비율?
+    column-gap: 12px;
+    row-gap: 1.5rem;
+  }
+
+  &--op-2 {
+    // grid-template-columns: repeat(3, 1fr);
+    // 몇번 반복?, 어떤걸 반복?
+    // grid-template-columns: 200px repeat(2, 1fr);
+    // 패륜(부모 뿌셔 부모 찢어)
+    // grid-template-columns: repeeat(3, minmax(100px 200px));
+    // 한쪽 최솟값, 한쪽 최댓값
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    // 4줄 이였다가 200 보다 작아지면 3줄로 줄어듦, 또 3줄에서 200보다 작아지면 2줄 ...
+    grid-auto-rows: minmax(1fr 200px);
+    column-gap: 0.75rem;
+    row-gap: 24px;
+  }
+}
