@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple js</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      .container {
+        max-width: 75rem;
+        margin-inline: auto;
+        padding: 48px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        /* auto-fit: 가능한 한 꽉꽉 채워줘. minmax: 최대 크기  */
+        grid-auto-rows: 1fr;
+        /* 정확한 사이즈는 모르고 비율임 */
+        background-color: oklch(0.95 0 0);
+        gap: 1.5rem;
+      }
+
+      .card {
+        padding: 1rem;
+        background-color: oklch(0.9 0.2 240);
+      }
+
+      .card:hover {
+        background-color: oklch(0.9 0.2 120);
+        /* 클릭했을 때 텍스트 박스 색깔 바뀌 */
+        transform: all 300 ease-in-out;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">Lorem.</div>
+      <div class="card">Numquam, officia.</div>
+      <div class="card">Sapiente, ipsam pariatur?</div>
+      <div class="card">Id qui adipisci velit.</div>
+      <div class="card">Ratione nobis ullam iste officia.</div>
+      <div class="card">Ex odio sapiente incidunt obcaecati doloremque.</div>
+      <div class="card">Impedit sint quo, aliquid dolores eveniet modi!</div>
+      <div class="card">
+        Quia necessitatibus, sed dolores doloribus rem quo cum.
+      </div>
+      <div class="card">
+        Commodi inventore ea voluptate ipsam impedit ad, hic beatae.
+      </div>
+      <div class="card">
+        Nam delectus necessitatibus doloremque quo, fugit dignissimos quisquam
+        quidem perspiciatis.
+      </div>
+    </div>
+  </body>
+</html>
