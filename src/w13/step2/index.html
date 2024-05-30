@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lottie Embeding</title>
+    <link rel="stylesheet" href="./style/style.css" />
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+    <script>
+      LottieInteractivity.create({
+        player: "#lottie-2",
+        mode: "chain",
+        actions: [
+          {
+            state: "click",
+            forceFlag: true,
+            frames: "star",
+            transition: "click",
+            count: 5,
+          },
+          {
+            path: "https://assets1.lottiefiles.com/packages/lf20_ISbOsd.json",
+            frames: "confetti",
+            state: "autoplay",
+            reset: true,
+            transition: "onComplete",
+          },
+        ],
+      });
+    </script>
+  </head>
+  <body>
+    <div class="section">
+      <div class="container">
+        <h1>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit,
+          voluptatem?
+        </h1>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit,
+          perspiciatis. Id a praesentium nesciunt quasi quo, cumque
+          reprehenderit vitae iusto fugit eos animi sapiente esse accusantium
+          dolores incidunt blanditiis dolore perspiciatis facere consectetur?
+          Ullam a error officiis corporis voluptatem voluptas nobis rerum,
+          soluta distinctio consectetur quos saepe itaque hic nulla!
+        </p>
+
+        <dotlottie-player
+          id="lottie-2"
+          class="lottie"
+          src="https://lottie.host/b0ba66d8-002e-4a62-a6e7-ff852693c0a1/hRhWdxl6pL.json"
+          background="transparent"
+          speed="1"
+          loop
+          autoplay
+        ></dotlottie-player>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium,
+          dolor vel veritatis aspernatur ipsa expedita amet voluptatibus
+          architecto nam repellendus!
+        </p>
+        <lottie-player
+          id="lottie-1"
+          class="lottie"
+          src="https://lottie.host/b0ba66d8-002e-4a62-a6e7-ff852693c0a1/hRhWdxl6pL.json"
+          background="transparent"
+          speed="1"
+        ></lottie-player>
+      </div>
+    </div>
+  </body>
+</html>

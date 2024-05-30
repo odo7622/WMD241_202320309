@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.1;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+.container {
+  max-width: 75rem;
+  padding-inline: 24px;
+  margin-inline: auto;
+  background-color: oklch(0.9 0 0);
+}
+
+.yt-video {
+  margin-inline: auto;
+  // 비디오영상 가운데로 가지고 오기
+  width: 100%;
+  // 비디오영상 화면 사이즈 맞춰서 꽉 커지기
+}
+
+#video1 {
+  aspect-ratio: 560 / 315;
+}
+
+#video2 {
+  aspect-ratio: 560 / 315;
+}
+
+img,
+iframe {
+  display: block;
+  // 비디오 사이에 마진(공간)이 생기는 이유 display가 inline으로 되어 있어서
+}
